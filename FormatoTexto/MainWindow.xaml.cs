@@ -24,21 +24,20 @@ namespace FormatoTexto
         public MainWindow()
         {
             InitializeComponent();
+            rojoRadioButton.IsChecked = true;
         }
 
         private void MainTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             textoFinalTextBlock.Text = mainTextBox.Text;
         }
-
-        private void NegritaCheckBox_Checked(object sender, RoutedEventArgs e)
+        private void NegritaCheckBox_Click(object sender, RoutedEventArgs e)
         {
-            textoFinalTextBlock.FontWeight = FontWeights.Bold;
+            textoFinalTextBlock.FontWeight = negritaCheckBox.IsChecked == true ? FontWeights.Bold : FontWeights.Normal;
         }
-
-        private void CursivaCheckBox_Checked(object sender, RoutedEventArgs e)
+        private void CursivaCheckBox_Click(object sender, RoutedEventArgs e)
         {
-            textoFinalTextBlock.FontStyle = FontStyles.Italic;
+            textoFinalTextBlock.FontStyle = cursivaCheckBox.IsChecked == true ? FontStyles.Italic : FontStyles.Normal;
         }
 
         private void RojoRadioButton_Checked(object sender, RoutedEventArgs e)

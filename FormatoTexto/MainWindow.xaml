@@ -28,13 +28,13 @@
                   HorizontalAlignment="Left"
                   Margin="200,66,0,0"
                   VerticalAlignment="Top"
-                  Checked="NegritaCheckBox_Checked" />
+                  Click="NegritaCheckBox_Click" />
         <CheckBox x:Name="cursivaCheckBox"
                   Content="Cursiva"
                   HorizontalAlignment="Left"
                   Margin="281,66,0,0"
                   VerticalAlignment="Top"
-                  Checked="CursivaCheckBox_Checked" />
+                  Click="CursivaCheckBox_Click" />
         <Label Content="Color del texto:"
                HorizontalAlignment="Left"
                Margin="362,60,0,0"
@@ -70,7 +70,8 @@
                    Height="20"
                    Width="520"
                    TextAlignment="Center"
-                   Background="#FFFFF5B5" />
+                   Background="#FFFFF5B5"
+                   TextTrimming="CharacterEllipsis"/>
 
     </Grid>
 </Window>
